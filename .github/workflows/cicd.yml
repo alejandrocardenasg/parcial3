@@ -19,11 +19,11 @@ jobs:
           push: true
           tags: cardenasgg/app:latest
 
-  deploy-in-docker:
+  test:
     runs-on: ubuntu-latest
-    name: ci
-    needs: cd
     steps:
-      - name: Crear docker-compose
-        run: | 
-          sudo docker-compose -f alejandrocardenasg/parcial3/docker-compose.yml up -d
+      - uses: actions/checkout@v2
+      - name: Build the stack
+        run: docker-compose up -d
+      - name: Test
+        run: docker run --network container:webapp-frontend appropriate/curl -s --retry 10 --retry-connrefused http://localhost:5000/
