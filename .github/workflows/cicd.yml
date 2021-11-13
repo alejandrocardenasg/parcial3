@@ -33,6 +33,7 @@ jobs:
         script: |
           git clone https://github.com/alejandrocardenasg/parcial3
           cp ./parcial3/docker-compose.yml ./app/
+          rm -fr ./parcial3
           cd app
-          docker-compose up -d
+          sudo docker-compose up -d
           
