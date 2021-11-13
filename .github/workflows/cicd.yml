@@ -35,5 +35,6 @@ jobs:
           cp ./parcial3/docker-compose.yml ./app/
           rm -fr ./parcial3
           cd app
+          sudo docker pull cardenasgg/app:latest
           sudo docker-compose up --build -d
           
