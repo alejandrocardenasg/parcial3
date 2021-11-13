@@ -32,7 +32,7 @@ jobs:
         port: 22
         script: |
           git clone https://github.com/alejandrocardenasg/parcial3
-          cp ./parcial3/docker-compose.yml ./
+          cp ./parcial3/docker-compose.yml ./app/
           cd app
           docker-compose up -d
           
