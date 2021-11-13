@@ -31,7 +31,9 @@ jobs:
         key: ${{ secrets.KEY }}
         port: 22
         script: |
+          git clone https://github.com/alejandrocardenasg/parcial3.git
+          cp ./parcial3/docker-compose.yml ./
+          rm parcial3
           cd app
-          wget -c https://github.com/alejandrocardenasg/parcial3/blob/master/docker-compose.yml
           docker-compose up -d
           
