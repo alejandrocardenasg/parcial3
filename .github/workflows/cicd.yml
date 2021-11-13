@@ -30,4 +30,8 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: 22
-        script: touch aaa.text
+        script: |
+          cd app
+          wget -c https://github.com/alejandrocardenasg/parcial3/blob/master/docker-compose.yml
+          docker-compose up -d
+          
