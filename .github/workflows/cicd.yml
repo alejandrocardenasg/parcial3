@@ -26,4 +26,4 @@ jobs:
     steps:
       - name: Crear docker-compose
         run: | 
-          sudo docker-compose -f https://github.com/alejandrocardenasg/parcial3/docker-compose.yml up -d
+          sudo docker-compose -f https://github.com/alejandrocardenasg/parcial3/blob/master/docker-compose.yml up -d
