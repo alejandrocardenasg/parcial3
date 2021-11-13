@@ -2,6 +2,6 @@ version: '3'
 services:
   api-test:
     container_name: api-test
-    image: cardenasgg/app:v2
+    image: cardenasgg/app:latest
     ports:
       - '8080:80'
